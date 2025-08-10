@@ -1,12 +1,12 @@
 # Discord e integração
 discord.py==2.4.0
 PyNaCl==1.5.0
+audioop-lts==0.2.1
 
 # Ambiente e utilidades
 python-dotenv==1.0.1
 aiohttp==3.9.5
 requests==2.32.3
-asyncio==3.4.3
 typing-extensions==4.12.2
 pytz==2024.2
 python-dateutil==2.9.0.post0
@@ -15,7 +15,7 @@ filetype==1.2.0
 
 # Servidor interno / API
 fastapi==0.112.2
-uvicorn==0.30.6
+uvicorn[standard]==0.30.6
 
 # IA e visão computacional
 openai==1.40.6
@@ -23,5 +23,5 @@ Pillow==10.4.0
 opencv-python==4.10.0.84
 imagehash==4.3.1
 
-# Banco de dados assíncrono
+# Banco de dados assíncrono (opcional no teu app, mas pode deixar)
 aiosqlite==0.20.0
