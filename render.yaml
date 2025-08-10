@@ -1,0 +1,54 @@
+services:
+  - type: web
+    name: awp-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    healthCheckPath: "/health"
+    autoDeploy: true
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false        # defina no painel do Render
+      - key: GUILD_ID
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: STAFF_ROLE_ID
+        sync: false
+      - key: TICKET_CATEGORY_ID
+        sync: false
+      - key: CHECKOUT_CATEGORY_ID
+        sync: false
+      - key: FREE_CATEGORY_ID
+        sync: false
+      - key: CHAT_CHANNEL_ID
+        sync: false
+      - key: ACCESS_ROLE_ID
+        sync: false
+      - key: FREE_ROLE_ID
+        sync: false
+      - key: LOGS_CHANNEL_ID
+        sync: false
+      - key: CHECKOUT_PRODUCT_NAME
+        sync: false
+      - key: CHECKOUT_LINK
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: "mistralai/mistral-7b-instruct:free"
+      - key: OPENROUTER_VISION_MODEL
+        value: "qwen/qwen-2.5-vl-7b-instruct:free"
+      - key: AFFILIATE_BASE
+        sync: false
+      - key: AFFILIATE_ROLE_ID
+        sync: false
+      - key: KEYS_FILE
+        value: "keys.txt"
+      - key: YOUTUBE_CHANNEL_NAMES
+        value: "AWP Oficial,AWP Nexus"
+      - key: THEME_COLOR
+        value: "0x5865F2"
+      - key: EMOJI_STYLE
+        value: "✨"
